@@ -1,0 +1,42 @@
+vehicles/Vehicle.java
+
+  package vehicles;
+
+public interface Vehicle {
+    void speed();
+}
+
+
+vehicles/Bike.java
+
+  package vehicles;
+
+public class Bike implements Vehicle {
+    public void speed() {
+        System.out.println("Bike speed: 80 km/h");
+    }
+}
+
+
+vehicles/Car.java
+
+  package vehicles;
+
+public class Car implements Vehicle {
+    public void speed() {
+        System.out.println("Car speed: 120 km/h");
+    }
+}
+
+Test file (outside package)
+import vehicles.*;
+
+public class TestVehicle {
+    public static void main(String[] args) {
+        Vehicle v1 = new Bike();
+        Vehicle v2 = new Car();
+
+        v1.speed();
+        v2.speed();
+    }
+}
