@@ -1,0 +1,35 @@
+class Payment {
+    void pay() {
+        System.out.println("Making a payment...");
+    }
+}
+
+class CreditCardPayment extends Payment {
+    void pay() {
+        System.out.println("Paid using Credit Card");
+    }
+}
+
+class UPIPayment extends Payment {
+    void pay() {
+        System.out.println("Paid using UPI");
+    }
+}
+
+class NetBankingPayment extends Payment {
+    void pay() {
+        System.out.println("Paid using Net Banking");
+    }
+}
+
+public class Main5 {
+    public static void processPayment(Payment p) {
+        p.pay();   // polymorphism
+    }
+
+    public static void main(String[] args) {
+        processPayment(new UPIPayment());
+        processPayment(new CreditCardPayment());
+        processPayment(new NetBankingPayment());
+    }
+}
