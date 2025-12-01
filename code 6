@@ -1,0 +1,4 @@
+The version of deliver() that executes depends on the object type at runtime, not the reference type.
+  example=
+  Transport t = new Truck();
+t.deliver();  // Truck’s deliver() executes → runtime polymorphism
