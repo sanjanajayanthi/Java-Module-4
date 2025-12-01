@@ -6,3 +6,64 @@ class Book {
         return "Book[title=" + title + ", price=" + price + "]";
     }
 }
+
+
+Print runtime class of Car
+class Car {}
+
+public class TestCar {
+    public static void main(String[] args) {
+        Car c = new Car();
+        System.out.println(c.getClass());
+    }
+}
+
+
+Student equals() + hashCode()
+class Student {
+    int roll;
+
+    public boolean equals(Object o) {
+        Student s = (Student)o;
+        return this.roll == s.roll;
+    }
+
+    public int hashCode() {
+        return roll;
+    }
+}
+
+Movie meaningful toString()
+class Movie {
+    String name;
+    int year;
+
+    public String toString() {
+        return "Movie[name=" + name + ", year=" + year + "]";
+    }
+}
+
+
+Player hashCode() for same age
+interface Bank {
+    float rateOfInterest();
+}
+
+class SBI implements Bank {
+    public float rateOfInterest() {
+        return 6.5f;
+    }
+}
+
+class HDFC implements Bank {
+    public float rateOfInterest() {
+        return 7.2f;
+    }
+}
+
+public class Main9 {
+    public static void main(String[] args) {
+        Bank b = new SBI();
+        System.out.println(b.rateOfInterest());
+    }
+}
