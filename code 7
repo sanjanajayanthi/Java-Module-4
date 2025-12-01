@@ -1,0 +1,18 @@
+final class CentralBankRules {   // cannot be extended
+}
+
+class Account {
+    final String accountNumber;   // cannot change
+
+    Account(String acc) {
+        this.accountNumber = acc;
+    }
+
+    final void bankPolicy() {     // cannot override
+        System.out.println("Common bank policy.");
+    }
+}
+
+class Savings extends Account {
+    Savings(String a) { super(a); }
+}
